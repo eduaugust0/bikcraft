@@ -1,0 +1,214 @@
+:root{
+  --cor-primaria: #e21;
+  --cor-secundaria: #900;
+  --fundo-1: #f7f7f7;
+  --fundo-2: #fff;
+  --texto: #000;
+  --subtitulo: #c6c6c6;
+  --onda: background-image: url(img/onda-clara.svg);
+}
+
+body {
+  background-color: var(--fundo-1);
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0rem;
+  display: grid;
+  justify-items: center;
+}
+
+.header {
+  text-align: center;
+  margin-top: 3.2rem;
+}
+
+.navlinks {
+  display: flex;
+  gap: 2.5rem;
+  margin: 3.2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.navlinks a {
+  background-color: var(--fundo-2);
+  color: var(--texto);
+  border-radius: 0.3rem;
+  padding: 0.6rem 1.25rem;
+  text-transform: uppercase;
+  border: 0.125rem solid transparent;
+}
+
+.navlinks a:hover {
+  border-style: solid;
+  border-color: var(--cor-primaria);
+}
+
+h2 {
+  background-color: var(--fundo-2);
+  padding: 1.25rem;
+  border-radius: 0.3rem;
+}
+.items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 62.5rem;
+}
+
+.position1 {
+  display: grid;
+  padding: 2.5px;
+  background-color: var(--fundo-2);
+  font-size: 1.25rem;
+  text-align: right;
+  align-content: center;
+  justify-items: end;
+  padding-right: 1rem;
+  position: relative;
+}
+
+h2 {
+  margin-bottom: 0rem;
+}
+
+a {
+  background-color: var(--cor-primaria);
+  padding: 1rem 2rem;
+  border-radius: 0.3rem;
+  text-decoration: none;
+  color: var(--fundo-2);
+  display: inline-block;
+  align-self: start;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.button {
+  color: white;
+}
+.button:hover {
+  background-color: var(--cor-secundaria);
+}
+
+.position1::after {
+  content: "";
+  display: block;
+  width: 4rem;
+  height: 0.25rem;
+  background: var(--cor-primaria);
+  position: absolute;
+  top: 1.5rem;
+  right: -1.8rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+.position3 {
+  text-align: right;
+  font-size: 4rem;
+  color: var(--subtitulo);
+  font-weight: bold;
+  padding-right: 2.5rem;
+  align-self: center;
+  background-image: url(img/onda-clara.svg);
+  background-position: 0dvw;
+}
+
+.position4 {
+  background-color: var(--fundo-2);
+}
+
+.position4 :nth-child(odd) {
+  background: var(--fundo-1);
+}
+
+.position4 {
+  margin: 2rem;
+}
+
+.img1, .img2, .img3 {
+  grid-column: 2;
+}
+
+
+.img1:hover, .img2:hover, .img3:hover {
+  border-left-style: solid;
+  border-left-color: var(--cor-primaria);
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0rem;
+}
+
+.footer {
+  background-color: var(--fundo-2);
+  text-align: center;
+  padding: 1.25rem;
+  width: 100%;
+  box-sizing: border-box;
+  grid-column: 1/-1;
+}
+
+@media (max-width: 1000px) {
+  .items {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1000px) {
+  .position1 h2 {
+    margin: auto;
+  }
+  .position1 p {
+    text-align: center;
+  }
+  .button {
+    margin: auto;
+  }
+  .position1::after {
+    content: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  .position3 {
+    text-align: center;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fundo-1: #111;
+    --fundo-2: #000;
+    --texto: #fff;
+    --onda: background-image: url(img/onda-escura.svg);
+  }
+
+  .navlinks a {
+    background-color: #525252;
+    color: var(--fundo-2);
+  }
+  .position1, .position4 {
+    background-color: #525252;
+  }
+  .position1 h2 {
+    background-color: #525252;
+    color: var(--fundo-2);
+  }
+  .position1 h2, p{
+    color: rgb(166, 166, 166);
+  }
+  .position4 :nth-child(odd) {
+    background-color: #525252;
+  }
+  .position4 {
+    color: var(--texto) ;
+    padding: 20px;
+  }
+  .footer {
+    color: var(--fundo-2 )
+  }
+}

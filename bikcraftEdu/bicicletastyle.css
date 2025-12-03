@@ -1,0 +1,262 @@
+body {
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 1530px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #fff;
+  max-width: 1500px;
+  margin: 0px;
+  background-color: black;
+  
+}
+
+.header h1 {
+  color: white;
+}
+
+.linkTitulo {
+  text-decoration: none;
+}
+
+.paragrafo {
+   margin-left: 20px;
+}
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.nav a {
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  list-style-type: none;
+  padding: 6px 10px;
+  display: block;
+  margin-right: 20px;
+  text-align: center;
+  font-size: 24px;
+}
+
+.nav li {
+   list-style-type: none;
+   float: left;
+}
+
+.introducao {
+  background-color: #111;
+  padding: 60px 0px 60px 20px;
+  color: white;
+}
+
+.introducao p {
+  padding: 0px;
+  margin: 0px;
+  font-size: 2rem;
+  color: grey;
+}
+
+.introducao h1 {
+  font-size: 4rem;
+  margin: 0px;
+}
+
+.period {
+  color: darkblue;
+}
+
+.segundaParte {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+.segundaParte img{
+  max-width: 100%;
+  padding: 80px 0px 50px 80px;
+}
+
+.spTexto, .spTexto2 {
+  padding: 80px 0px 50px 50px;
+}
+
+.spTexto, .spTexto2 h2 {
+  margin: 0px;
+  font-size: 2.5rem;
+}
+
+.spTexto, .spTexto2 p {
+  margin: 20px 0px 0px 0px;
+  font-size: 1.125rem;
+  color: grey;
+}
+
+.listaCaracteristicas {
+  font-size: 1.4rem;
+  padding: 5px 0px 0px 0px;
+  font-weight: bold;
+}
+
+.listaCaracteristicas li {
+  list-style-type: none;
+}
+
+.lc1::before{
+  content: '';
+  background: url('images/icones/eletrica.svg');
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  margin-right: 10px;
+  background-position: center;
+  vertical-align: middle;
+}
+
+
+.lc2::before{
+  content: '';
+  background: url('images/icones/carbono.svg');
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  margin-right: 10px;
+  background-position: center;
+  vertical-align: middle;
+}
+
+.lc3::before{
+  content: '';
+  background: url('images/icones/velocidade.svg');
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  margin-right: 10px;
+  background-position: center;
+  vertical-align: middle;
+}
+
+.lc4::before{
+  content: '';
+  background: url('images/icones/rastreador.svg');
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  margin-right: 10px;
+  background-position: center;
+  vertical-align: middle;
+}
+
+.spBtn a{
+  position: relative;
+  text-decoration: none;
+  padding: 10px 30px 10px 18px;
+  background-color: blue;
+  border-radius: 4px;
+  color: white;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.spBtn::after {
+  content: '';
+  background: url('images/icones/seta.svg');
+  position: absolute;
+  right: 558px; 
+  top: 758px;
+  width: 18px;
+  height: 10px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.spTexto2 {
+  position: relative;
+  color: white;
+}
+.spTexto2::before {
+  content: '';
+  background-color: #111;
+  width: 680px;
+  height: 488px;
+  position: absolute;
+  overflow: hidden;
+  z-index: -1;
+}
+
+
+.footer {
+  background-color: black;
+}
+
+.footer-container {
+  max-width: 1500px;
+  padding: 60px 20px 30px 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  gap: 20px;
+  align-items: center;
+}
+
+.logo {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 20px 0px 0px 30px;
+}
+
+.footer-contato {
+  font-size: 1.7rem;
+  color: white;
+}
+
+.footer-contatos {
+  padding-top: 10px;
+}
+.footer-contatos li {
+  font-size: 1.2rem;
+  line-height: 1.1;
+  color: grey;
+  margin-bottom: 30px;
+  line-height: 1px;
+  padding-top: 0px;
+  margin-top: 0px;
+  list-style-type: none;
+}
+
+.footer-contatos li a {
+  color: grey;
+  text-decoration: none;
+
+}
+
+.footer-copy {
+  grid-column: 1 / -1;
+  font-size: 1.125rem;
+  color: #8f8f8f;
+  margin-top: 50px;
+}
+
+.footer-detalhe {
+  display: block;
+  color: grey;
+  margin: 20px;
+}
+
+@media (max-width: 800px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .footer-contatos li {
+    font-size: 1.5rem;
+  }
+}
