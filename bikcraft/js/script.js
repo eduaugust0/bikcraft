@@ -68,3 +68,8 @@ galeria.forEach(eventosGaleria);
 if (window.SimpleAnime){
   new SimpleAnime();
 }
+
+//copia 
+if (window.ClipboardJS) {
+  new ClipboardJS('.footer-tel');
+}
